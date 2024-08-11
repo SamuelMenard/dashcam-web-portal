@@ -1,22 +1,28 @@
+import { NavLink } from 'react-router-dom';
 import './NavBarRoutes.scss';
 
 function NavBarRoutes() {
     return (
         <ul className="nav flex-column">
             <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <NavLink
+                    className={({ isActive }) =>
+                        'nav-link' + (isActive ? ' active' : '')
+                    }
+                    to="/"
+                >
+                    Home
+                </NavLink>
+            </li>
+            <li className="nav-item">
+                <NavLink
+                    className={({ isActive }) =>
+                        'nav-link' + (isActive ? ' active' : '')
+                    }
+                    to="/vehicles"
+                >
                     Vehicles
-                </a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="#">
-                    Link
-                </a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="#">
-                    Link
-                </a>
+                </NavLink>
             </li>
         </ul>
     );
