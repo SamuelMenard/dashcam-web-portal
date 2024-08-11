@@ -1,6 +1,6 @@
 import { Device } from '../models/device';
 import DeviceCard from './device-card/DeviceCard';
-import './device-card/DeviceCard.scss';
+import './DevicesPage.scss';
 
 const devices: Device[] = [
     {

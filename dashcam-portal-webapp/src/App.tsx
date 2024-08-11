@@ -1,11 +1,11 @@
 import './App.css';
-import DevicesPage from './modules/devices/components/DevicesPage';
+import VehiclesPage from './modules/vehicles/components/vehicles-page/VehiclesPage';
 
 function App() {
     return (
         <>
             <div className="container">
-                <DevicesPage></DevicesPage>
+                <VehiclesPage></VehiclesPage>
             </div>
         </>
     );
