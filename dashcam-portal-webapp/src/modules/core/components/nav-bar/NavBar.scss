@@ -1,0 +1,24 @@
+.nav-bar-container {
+    height: 100vh;
+
+    > .nav-bar-layout {
+        height: 100%;
+        display: grid;
+        grid-template-rows: [branding-start] 150px [branding-end routes-start] auto [routes-end profile-start] 150px [profile-end];
+
+        > .branding-area {
+            grid-row: branding-start / branding-end;
+            background-color: red;
+        }
+
+        > .routes-area {
+            grid-row: routes-start / routes-end;
+            background-color: blue;
+        }
+
+        > .profile-area {
+            grid-row: profile-start / profile-end;
+            background-color: cadetblue;
+        }
+    }
+}
