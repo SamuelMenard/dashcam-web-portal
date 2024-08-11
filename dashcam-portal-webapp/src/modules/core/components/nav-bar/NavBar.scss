@@ -1,6 +1,10 @@
 .nav-bar-container {
     height: 100vh;
 
+    // To be removed
+    border-width: 0 2px 0 0;
+    border-style: solid;
+
     > .nav-bar-layout {
         height: 100%;
         display: grid;
@@ -8,17 +12,14 @@
 
         > .branding-area {
             grid-row: branding-start / branding-end;
-            background-color: red;
         }
 
         > .routes-area {
             grid-row: routes-start / routes-end;
-            background-color: blue;
         }
 
         > .profile-area {
             grid-row: profile-start / profile-end;
-            background-color: cadetblue;
         }
     }
 }
