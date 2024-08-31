@@ -13,7 +13,7 @@ const VehicleCard = ({ id, name }: Props) => {
             <img src={carIcon} alt="Car" />
             <div className="card-body">
                 <h5 className="card-title">{name}</h5>
-                <NavLink className="btn btn-primary" to={'/vehicle/' + id}>
+                <NavLink className="btn btn-primary" to={'/vehicles/' + id}>
                     View vehicle
                 </NavLink>
             </div>
