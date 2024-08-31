@@ -1,5 +1,6 @@
 import './VehicleCard.scss';
 import carIcon from '../../../../assets/car.svg';
+import { NavLink } from 'react-router-dom';
 
 interface Props {
     id: string;
@@ -12,6 +13,9 @@ const VehicleCard = ({ id, name }: Props) => {
             <img src={carIcon} alt="Car" />
             <div className="card-body">
                 <h5 className="card-title">{name}</h5>
+                <NavLink className="btn btn-primary" to={'/vehicle/' + id}>
+                    View vehicle
+                </NavLink>
             </div>
         </div>
     );

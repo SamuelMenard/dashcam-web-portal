@@ -2,7 +2,7 @@ import { Vehicle } from '../../models/vehicle';
 import VehicleCard from '../vehicle-card/VehicleCard';
 import './VehiclesPage.scss';
 
-const devices: Vehicle[] = [
+const vehicles: Vehicle[] = [
     {
         id: '1',
         name: 'Tesla Model 3',
@@ -18,7 +18,7 @@ const VehiclesPage = () => {
         <>
             <h1>My vehicles</h1>
             <div className="vehicles-container">
-                {devices.map((device) => {
+                {vehicles.map((device) => {
                     return (
                         <VehicleCard
                             key={device.id}
