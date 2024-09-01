@@ -5,7 +5,7 @@ import VehiclesPage from './modules/vehicles/components/vehicles-page/VehiclesPa
 import HomePage from './modules/core/components/home/HomePage';
 import NotFoundPage from './modules/core/components/not-found/NotFoundPage';
 import VehiclePage from './modules/vehicles/components/vehicle-page/VehiclePage';
-import CameraPage from './modules/media/components/CameraPage';
+import DevicePage from './modules/devices/components/device-page/DevicePage';
 
 function App() {
     return (
@@ -19,8 +19,8 @@ function App() {
                         <Route path="*" element={<NotFoundPage />} />
                         <Route path="/" element={<HomePage />} />
                         <Route
-                            path="/cameras/:cameraId"
-                            element={<CameraPage />}
+                            path="/devices/:deviceId"
+                            element={<DevicePage />}
                         />
                         <Route path="/vehicles" element={<VehiclesPage />} />
                         <Route

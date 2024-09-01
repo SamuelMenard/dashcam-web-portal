@@ -1,23 +1,19 @@
-import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 interface Props {
     id: string;
     name: string;
-    onDeviceClick: (id: string) => void;
 }
 
-const DeviceCard = ({ name, id, onDeviceClick }: Props) => {
+const DeviceCard = ({ name, id }: Props) => {
     return (
         <div className="card">
             <h5 className="card-header">{name}</h5>
             <div className="card-body">
                 <h5 className="card-title">LIVESTREAM HERE</h5>
-                <button
-                    className="btn btn-primary"
-                    onClick={() => onDeviceClick(id)}
-                >
-                    Go somewhere
-                </button>
+                <NavLink className="btn btn-primary" to={'/devices/' + id}>
+                    View device
+                </NavLink>
             </div>
         </div>
     );

@@ -1,17 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Vehicle } from '../../models/vehicle';
-
-const vehicles: Vehicle[] = [
-    {
-        id: '1',
-        name: 'Tesla Model 3',
-    },
-    {
-        id: '2',
-        name: 'Subaru WRX',
-    },
-];
+import DummyData from '../../../../database/dummy-data';
+import DeviceCard from '../../../devices/components/device-card/DeviceCard';
 
 const VehiclePage = () => {
     let { vehicleId } = useParams();
@@ -19,7 +10,7 @@ const VehiclePage = () => {
 
     useEffect(() => {
         // Fetch vehicle informations
-        const vehicle = vehicles.find((v) => v.id === vehicleId);
+        const vehicle = DummyData.vehicles.find((v) => v.id === vehicleId);
 
         // Vehicle found, display its informations
         if (vehicle) {
@@ -30,6 +21,17 @@ const VehiclePage = () => {
     return (
         <>
             <h1>{vehicle?.name}</h1>
+            <div className="devices-container">
+                {DummyData.devices.map((device) => {
+                    return (
+                        <DeviceCard
+                            key={device.id}
+                            id={device.id}
+                            name={device.name}
+                        ></DeviceCard>
+                    );
+                })}
+            </div>
         </>
     );
 };
